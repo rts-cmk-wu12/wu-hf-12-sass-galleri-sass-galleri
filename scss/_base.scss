@@ -18,6 +18,9 @@ header{
     ul {
         list-style-type: none;
         padding: 0;
+        .mobile-only{
+            max-width: 2rem;
+        }
     
         li {
             position: relative;

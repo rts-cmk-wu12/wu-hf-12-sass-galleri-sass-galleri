@@ -20,6 +20,9 @@ header ul {
   list-style-type: none;
   padding: 0;
 }
+header ul .mobile-only {
+  max-width: 2rem;
+}
 header ul li {
   position: relative;
   display: inline-block;
@@ -76,4 +79,25 @@ footer ul li a img {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  body header ul li {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  body header ul li {
+    display: inline-block;
+  }
+}
+@media (max-width: 1200px) {
+  body header ul .mobile-only {
+    display: inline-block;
+  }
+}
+@media (min-width: 1200px) {
+  body header ul .mobile-only {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
