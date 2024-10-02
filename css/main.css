@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap);
 * {
   font-family: Inter;
@@ -13,10 +12,10 @@ main .photos {
 }
 main .photos img {
   width: 100%;
-  height: auto; /* Fjern fast højde */
+  height: auto;
   -o-object-fit: cover;
-     object-fit: cover; /* Bevar billedets dimensioner og skær det til, hvis nødvendigt */
-  display: block; /* Fjerner uønskede mellemrum omkring billedet */
+     object-fit: cover;
+  display: block;
 }
 
 .search {

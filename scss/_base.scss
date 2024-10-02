@@ -10,10 +10,9 @@ main{
 
     .photos img {
         width: 100%;
-        height: auto; /* Fjern fast højde */
-        object-fit: cover; /* Bevar billedets dimensioner og skær det til, hvis nødvendigt */
-
-        display: block; /* Fjerner uønskede mellemrum omkring billedet */
+        height: auto;
+        object-fit: cover;
+        display: block;
     }
 }
 
@@ -36,23 +35,20 @@ header{
         .mobile-only{
             max-width: 2rem;
         }
-    
         li {
             position: relative;
             display: inline-block;
             margin-right: 20px;
             margin-bottom: 1rem;
-    
             a {
                 text-decoration: none;
                 padding: 10px;
                 color: #b2b2b2;
-                
                 .arrow {
                     margin-left: 5px;
                 }
             }
-            
+
             // Dropdown styles
             &.dropdown {
                 .dropdown-content {
