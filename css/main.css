@@ -1,0 +1,197 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* problem: den vil ikke loade disse variabler og mixin ved ovenstående */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.three-dot-menu__container, .wrapper, .header, .header__navigation-container, .gallery__list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* problem: den vil ikke loade mixin i ovenstående */
+.gallery__list, .header__navigation-container, .header, .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+.desktop-show {
+  display: none;
+}
+
+.wrapper {
+  gap: 1rem;
+  padding-block-end: 4rem;
+}
+
+.header {
+  gap: 2rem;
+  padding: 0.3rem 1rem;
+}
+.header__navigation-container {
+  gap: 0.5rem;
+}
+.header__navigation {
+  display: none;
+}
+.header .three-dot-menu {
+  display: flex;
+  margin-inline-end: 0.75rem;
+}
+
+.gallery {
+  padding: 1rem;
+}
+.gallery__list {
+  gap: 1rem;
+}
+.gallery__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 64rem) {
+  .wrapper {
+    gap: 2rem;
+  }
+  .desktop-show {
+    display: block;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    /* NB: placeholder/%flex extend across media query - ? */
+  }
+  .header .three-dot-menu {
+    display: none;
+  }
+  .header__navigation-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .header__navigation {
+    display: block;
+  }
+  .header-menu {
+    display: flex;
+    gap: 2rem;
+  }
+  .header-menu__item {
+    border-radius: 20rem;
+    padding: 0.5rem 1rem;
+  }
+  .gallery {
+    margin: 0 auto;
+  }
+  .gallery__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+  .gallery__list-item {
+    width: 23.7%;
+  }
+}
+/* problem: den vil ikke loade variables og mixins fra ovenstående */
+.header__input-container {
+  padding-block-end: 0.5rem;
+  border-block-end: 1px solid lightgray;
+}
+.header__input {
+  padding: 0.5rem;
+  border-radius: 0.35rem;
+  border: none;
+  font-weight: 700;
+  width: 100%;
+  background: lightgray;
+  color: darkgray;
+}
+.header-menu {
+  color: darkgray;
+}
+
+.header__category-select {
+  border: none;
+  font-size: 1rem;
+}
+
+.header-menu__item:nth-child(1) {
+  box-shadow: 0px 0px 10px #333333;
+}
+
+.header-menu__item:nth-child(2) {
+  box-shadow: 0px 0px 10px #666666;
+}
+
+.header-menu__item:nth-child(3) {
+  box-shadow: 0px 0px 10px #999999;
+}
+
+.header-menu__item:nth-child(4) {
+  box-shadow: 0px 0px 10px #cccccc;
+}
+
+.header-menu__item:nth-child(5) {
+  box-shadow: 0px 0px 10px white;
+}
+
+.three-dot-menu__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.three-dot-menu__container {
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  border: 1px solid darkgray;
+}
+.three-dot-menu__container:hover {
+  background-color: lightgray;
+}
+.three-dot-menu__dot {
+  width: 1rem;
+  height: 3px;
+  border-radius: 50%;
+  background-color: darkgray;
+}
+
+.three-dot-menu-frame {
+  z-index: 1000;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.25rem 0;
+  background-color: white;
+}
+.three-dot-menu-frame__link {
+  color: black;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+}
+.three-dot-menu-frame__link:hover {
+  background-color: lightgray;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,56 @@
+@use 'placeholders';
+@use 'variables';
+
+$color-light: white;
+$color-medium-light: lightgray;
+$color-medium-dark: darkgray;
+$color-dark: black;
+$font-family: "Montserrat", sans-serif;
+
+%flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.three-dot-menu {
+    
+    &__container {
+        @extend %flex-column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2rem;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 0.5rem;
+        background-color: $color-light;
+        border: 1px solid $color-medium-dark;
+        
+        &:hover {
+            background-color: $color-medium-light;
+        } 
+    }
+
+    &__dot {
+        width: 1rem;
+        height: 3px;
+        border-radius: 50%;
+        background-color: $color-medium-dark;
+    }    
+}
+
+.three-dot-menu-frame {
+    z-index: 1000;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.25rem 0;
+    background-color: $color-light;
+    
+    &__link {
+        color: $color-dark;
+        border-radius: 0.5rem;
+        padding: 0.2rem;
+        
+        &:hover {
+            background-color: $color-medium-light;
+        }
+    }
+}

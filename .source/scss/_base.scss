@@ -1,0 +1,46 @@
+@use 'variables';
+@use 'mixins';
+
+/* problem: den vil ikke loade variables og mixins fra ovenstående */
+$color-light: white;
+$color-medium-light: lightgray;
+$color-medium-dark: darkgray;
+$color-dark: black;
+$font-family: "Montserrat", sans-serif;
+
+@mixin color-scheme-muted {
+    background: $color-medium-light;
+    color: $color-medium-dark;
+}
+
+@mixin color-theme-contrast {
+    background: $color-light;
+    color: $color-dark;
+}
+
+.header {
+
+    &__input-container {
+        padding-block-end: 0.5rem;
+        border-block-end: 1px solid $color-medium-light;
+
+    }
+
+    &__input {
+        padding: 0.5rem;
+        border-radius: 0.35rem;
+        border: none;
+        font-weight: 700;
+        width: 100%;
+        @include color-scheme-muted;
+    }
+
+    &-menu {
+        color: $color-medium-dark;
+    }
+}
+
+.header__category-select {
+    border: none;
+    font-size: 1rem;
+}
