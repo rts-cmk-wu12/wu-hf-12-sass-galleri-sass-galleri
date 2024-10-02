@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: inherit;
+}
+
+/*Her laver jeg variabler til farver*/
+:root {
+  --white-color: #ffffff;
+  --dark-color: #343a40;
+  --light-grey-color: #b2b2b2;
+  --light-color: #f8f9fa;
+}
+
+/*Her laver jeg layout til nav*/
+.nav__ {
+  height: 65px;
+}
+
+.nav__search__bar {
+  background-color: var(--light-color);
+  display: grid;
+  margin: 0 auto;
+  width: 2200px;
+  height: 45px;
+  border: none;
+  outline: none;
+}
+
+.nav__underline {
+  color: var(--light-grey-color);
+}
+
+/*Her styler jeg links og header*/
+.explore__container {
+  display: grid;
+  margin: 25px;
+}/*# sourceMappingURL=style.css.map */

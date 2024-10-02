@@ -1,0 +1,24 @@
+/*Her laver jeg layout til nav*/
+.nav__ {
+    height: 65px;
+}
+
+.nav__search__bar {
+    background-color: var(--light-color);
+    display: grid;
+    margin: 0 auto;
+    width: 2200px;
+    height: 45px;
+    border: none;
+    outline: none;
+}
+
+.nav__underline {
+    color: var(--light-grey-color);
+}
+
+/*Her styler jeg links og header*/
+.explore__container {
+    display: grid;
+    margin: 25px;
+}
