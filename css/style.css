@@ -18,6 +18,7 @@
 /*Her laver jeg layout til nav*/
 header {
   border-bottom: 1px solid;
+  color: var(--light-grey-color);
 }
 
 .nav__ {
@@ -32,10 +33,6 @@ header {
   height: 45px;
   border: none;
   outline: none;
-}
-
-.nav__underline {
-  color: var(--light-grey-color);
 }
 
 ::-moz-placeholder {
@@ -70,6 +67,10 @@ header {
   font-weight: bold;
 }
 
+.explore__links:hover {
+  color: var(--dark-color);
+}
+
 .explore__container {
   display: flex;
   margin: 25px;
@@ -98,5 +99,52 @@ header {
 
 /*footer*/
 .footer__ {
+  margin-top: 50px;
   height: 328px;
+  border-top: 1px solid var(--light-grey-color);
+}
+
+.footer__logos {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  gap: 1em;
+  color: var(--dark-color);
+}
+
+/*responsive*/
+@media screen and (max-width: 800px) {
+  .gallery__column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .gallery__column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+.imageFocus {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.278);
+  width: 100%;
+  height: 2000px;
+  margin-top: -3rem;
+  padding-top: 3rem;
+  z-index: 100;
+}
+.imageFocus__imageDiv {
+  max-width: 60%;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  margin: 0 auto;
+}
+.imageFocus__x {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  justify-self: end;
+  margin-right: 2rem;
+  font-size: 3rem;
 }/*# sourceMappingURL=style.css.map */
