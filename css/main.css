@@ -1,0 +1,168 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap);
+* {
+  font-family: Inter;
+}
+
+main {
+  margin: 1rem;
+}
+main .photos {
+  display: grid;
+  gap: 10px;
+}
+main .photos img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.search {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+header {
+  margin-left: 12rem;
+  margin-top: 5rem;
+}
+header h2 {
+  margin-left: 0.5rem;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+header ul {
+  list-style-type: none;
+  padding: 0;
+}
+header ul .mobile-only {
+  max-width: 2rem;
+}
+header ul li {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 1rem;
+}
+header ul li a {
+  text-decoration: none;
+  padding: 10px;
+  color: #b2b2b2;
+}
+header ul li a .arrow {
+  margin-left: 5px;
+}
+header ul li.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+header ul li.dropdown .dropdown-content li a {
+  padding: 10px;
+  color: #b2b2b2;
+}
+header ul li:hover .dropdown-content {
+  display: block;
+}
+
+footer {
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+footer ul li {
+  list-style-type: none;
+}
+footer ul li a {
+  text-decoration: none;
+}
+footer ul li a img {
+  max-width: 1rem;
+  max-height: 1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#burgerIcon {
+  cursor: pointer;
+  width: 50px; /* Juster størrelsen på burger-ikonet */
+}
+
+.burgermenu {
+  position: fixed;
+  top: 14.4rem;
+  left: -250px; /* Skub menuen uden for skærmen */
+  width: 250px;
+  height: 100%; /* Højden er 100% for at dække hele skærmen */
+  background-color: rgb(255, 255, 255); /* Baggrundsfarve til menuen */
+  transition: left 0.3s ease; /* Glideeffekt for menuen */
+  display: flex; /* Brug flexbox for centrering af indhold */
+  z-index: 9; /* Sørger for, at menuen er over andet indhold, men under headeren */
+}
+.burgermenu nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+.burgermenu nav ul li {
+  margin: 15px 0;
+  margin-left: 1rem;
+}
+.burgermenu nav ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 24px; /* Juster skrifttypestørrelse */
+}
+.burgermenu.active {
+  left: 0; /* Skub menuen ind på skærmen */
+}
+
+@media (max-width: 600px) {
+  body .search {
+    padding-top: 0.2rem;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+  }
+  body header {
+    margin: 0;
+    padding: 0;
+    margin-left: 0.2rem;
+  }
+  body header ul li {
+    display: none;
+  }
+  body header ul .mobile-only {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+  body main .photos {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+  }
+}
+@media (min-width: 601px) {
+  body header ul li {
+    display: inline-block;
+  }
+  body header ul .mobile-only {
+    display: none;
+  }
+  main .photos {
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 1fr;
+  }
+}/*# sourceMappingURL=main.css.map */

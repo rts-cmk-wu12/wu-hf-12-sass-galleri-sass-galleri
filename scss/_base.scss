@@ -1,0 +1,99 @@
+*{
+    font-family: Inter;
+
+}
+main{
+    margin: 1rem;
+    .photos {
+        display: grid;
+        gap: 10px;
+    }
+
+    .photos img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+//header
+.search{
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+header{
+    margin-left: 12rem;
+    margin-top: 5rem;
+    h2{
+        margin-left: 0.5rem;
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        .mobile-only{
+            max-width: 2rem;
+        }
+        li {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 1rem;
+            a {
+                text-decoration: none;
+                padding: 10px;
+                color: #b2b2b2;
+                .arrow {
+                    margin-left: 5px;
+                }
+            }
+
+            // Dropdown styles
+            &.dropdown {
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: rgb(255, 255, 255);
+                    min-width: 160px; 
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    z-index: 1;
+                    li {
+                        a {
+                            padding: 10px;
+                            color: #b2b2b2; 
+                        }
+                    }
+                }
+}
+
+            &:hover .dropdown-content {
+                display: block;
+            }
+        }
+    }
+}
+
+//footer
+footer {
+    margin-top: 16rem;
+    margin-bottom: 16rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        li{
+            list-style-type: none;
+            a{
+                text-decoration: none;
+                img{
+                    max-width: 1rem;
+                    max-height: 1rem;
+                }
+            }
+        }
+    }
+}
