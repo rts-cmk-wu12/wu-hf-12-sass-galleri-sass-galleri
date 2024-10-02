@@ -1,13 +1,15 @@
 /*Her laver jeg layout til nav*/
 
-header{
+header {
     border-bottom: 1px solid;
+    color: var(--light-grey-color);
 }
+
 .nav__ {
     height: 65px;
 }
 
-.nav__search__bar {
+.nav__searchbar {
     background-color: var(--light-color);
     display: grid;
     margin: 0 auto;
@@ -17,11 +19,7 @@ header{
     outline: none;
 }
 
-.nav__underline {
-    color: var(--light-grey-color);
-}
-
-::placeholder{
+::placeholder {
     font-size: 20px;
     font-weight: bold;
     color: var(--search-color);
@@ -30,10 +28,11 @@ header{
 
 
 /*Her styler jeg links og header*/
-.explore__section{
+.explore__section {
     margin-left: 20em;
 }
-.explore__header{
+
+.explore__header {
     display: flex;
     margin: 25px;
     gap: 1rem;
@@ -41,11 +40,17 @@ header{
     color: var(--dark-color);
 }
 
-.explore__links{
+.explore__links {
     text-decoration: none;
     font-size: 24px;
     color: var(--light-grey-color);
     font-weight: bold;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.explore__links:hover {
+    box-shadow: inset 100px 0 0 0 #000000;
+    color: var(--white-color)
 }
 
 .explore__container {
@@ -61,22 +66,68 @@ header{
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 0 4px;
-  }
+}
 
-  .gallery__column {
+.gallery__column {
     -ms-flex: 25%;
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
-  }
-  .gallery__column img {
+}
+
+.gallery__column img {
     margin-top: 8px;
     vertical-align: middle;
     width: 95%;
     border-radius: 5px;
-  }
+}
+.gallery__img{
+    transition: 1s ease;
+}
+.gallery__img:hover {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    transition: 1s ease;
+}
 
-  /*footer*/
-  .footer__{
+/*footer*/
+.footer__ {
+    margin-top: 50px;
     height: 328px;
-  }
+    border-top: 1px solid var(--light-grey-color);
+}
+
+.footer__logos {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    gap: 1em;
+    color: var(--dark-color);
+}
+
+
+/*responsive*/
+@media screen and (max-width: 800px) {
+    .gallery__column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+    .explore__section{
+        display: grid;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .gallery__column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+    .explore__section{
+        display: grid;
+        margin: 0 auto;
+    }
+}

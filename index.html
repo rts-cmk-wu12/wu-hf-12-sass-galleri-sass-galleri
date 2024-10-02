@@ -5,16 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galleri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="modal.js"></script>
 </head>
 
 <body>
+    <div class="imageFocus">
+        <i class="fa-solid fa-x imageFocus__logo"></i>
+        <div class="imageFocus__imageDiv"><img src="images/welcomeimage.jpg" alt="" class="imageFocus__image"></div>
+    </div>
     <div id="wrapper">
         <header>
             <nav class="nav__">
-                <input class="nav__search__bar" type="text" placeholder="Search...">
+                <input class="nav__searchbar" type="text" placeholder="Search...">
             </nav>
-            
+
         </header>
         <main>
             <section class="explore__section">
@@ -30,37 +36,42 @@
             <article class="gallery__article">
                 <div class="gallery__container">
                     <div class="gallery__column">
-                        <img src="images/welcomeimage.jpg" alt="">
-                        <img src="images/aestheticimage.jpg" alt="">
-                        <img src="images/flowers.jpg" alt="">
+                        <img class="gallery__img" src="images/welcomeimage.jpg" alt="">
+                        <img class="gallery__img" src="images/aestheticimage.jpg" alt="">
+                        <img class="gallery__img" src="images/flowers.jpg" alt="">
                     </div>
-                
+
                     <div class="gallery__column">
-                        <img src="images/plant.jpg" alt="">
-                        <img src="images/coolimage.jpg" alt="">
-                        <img src="images/fisheye.jpg" alt="">
-                        <img src="images/jungle.jpg" alt="">
-                        <img src="images/cowboybepop.jpg" alt="">
-                    </div>
-                    <div class="gallery__column">
-                        <img src="images/leafs.jpg" alt="">
-                        <img src="images/noparking.jpg" alt="">
-                        <img src="images/instrument.jpg" alt="">
-                        <img src="images/drt.jpg" alt="">
-                        <img src="images/cactus.jpg" alt="">
+                        <img class="gallery__img" src="images/plant.jpg" alt="">
+                        <img class="gallery__img" src="images/coolimage.jpg" alt="">
+                        <img class="gallery__img" src="images/fisheye.jpg" alt="">
+                        <img class="gallery__img" src="images/jungle.jpg" alt="">
+                        <img class="gallery__img" src="images/cowboybepop.jpg" alt="">
                     </div>
                     <div class="gallery__column">
-                        <img src="images/mango.jpg" alt="">
-                        <img src="images/seeds.jpg" alt="">
-                        <img src="images/peaceimage.jpg" alt="">
-                        <img src="images/botany.jpg" alt="">
+                        <img class="gallery__img" src="images/leafs.jpg" alt="">
+                        <img class="gallery__img" src="images/noparking.jpg" alt="">
+                        <img class="gallery__img" src="images/instrument.jpg" alt="">
+                        <img class="gallery__img" src="images/drt.jpg" alt="">
+                        <img class="gallery__img" src="images/cactus.jpg" alt="">
+                    </div>
+                    <div class="gallery__column">
+                        <img class="gallery__img" src="images/mango.jpg" alt="">
+                        <img class="gallery__img" src="images/seeds.jpg" alt="">
+                        <img class="gallery__img" src="images/peaceimage.jpg" alt="">
+                        <img class="gallery__img" src="images/botany.jpg" alt="">
                     </div>
                 </div>
             </article>
         </main>
-        <hr class="nav__underline">
         <footer class="footer__">
-
+            <div class="footer__logos">
+                <div class="footer__logositem"><i class="fa-brands fa-facebook-f"></i></div>
+                <div class="footer__logositem"><i class="fa-brands fa-twitter"></i></div>
+                <div class="footer__logositem"><i class="fa-brands fa-instagram"></i></div>
+                <div class="footer__logositem"><i class="fa-brands fa-google-plus-g"></i></div>
+                <div class="footer__logositem"><i class="fa-solid fa-globe"></i></div>
+            </div>
         </footer>
     </div>
 </body>
