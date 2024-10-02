@@ -1,3 +1,4 @@
+@charset "UTF-8";
 main {
   margin: 1rem;
 }
@@ -99,5 +100,34 @@ footer ul li a img {
 @media (min-width: 1200px) {
   body header ul .mobile-only {
     display: none;
+  }
+}
+
+main .photos {
+  display: grid;
+  gap: 10px;
+}
+main .photos img {
+  width: 100%;
+  height: auto; /* Fjern fast højde */
+  -o-object-fit: cover;
+     object-fit: cover; /* Bevar billedets dimensioner og skær det til, hvis nødvendigt */
+  display: block; /* Fjerner uønskede mellemrum omkring billedet */
+}
+@media (max-width: 600px) {
+  main body div.search {
+    background-color: red;
+  }
+  main body header {
+    background-color: red;
+  }
+  main body main .photos {
+    grid-template-columns: 1fr; /* Enkelt kolonne på mindre skærme */
+  }
+}
+@media (min-width: 601px) {
+  main body main .photos {
+    grid-template-columns: repeat(5, 1fr); /* Fem kolonner på større skærme */
+    grid-auto-rows: 1fr; /* Dynamisk højde til rækker */
   }
 }/*# sourceMappingURL=main.css.map */

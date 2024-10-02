@@ -23,6 +23,51 @@ body{
 }
 
 
+main {
+    .photos {
+        display: grid;
+        gap: 10px;
+    }
+
+    .photos img {
+        width: 100%;
+        height: auto; /* Fjern fast højde */
+        object-fit: cover; /* Bevar billedets dimensioner og skær det til, hvis nødvendigt */
+      
+        display: block; /* Fjerner uønskede mellemrum omkring billedet */
+    }
+
+    @media (max-width: 600px) {
+        body{
+            div.search{
+                background-color: red;
+            }
+            header{
+                background-color: red;
+            }
+            main{
+                .photos {
+                    grid-template-columns: 1fr; /* Enkelt kolonne på mindre skærme */
+                }
+            }
+        }
+    }
+
+    @media (min-width: 601px) {
+        body{
+            main{<
+                .photos {
+                    grid-template-columns: repeat(5, 1fr); /* Fem kolonner på større skærme */
+                    grid-auto-rows: 1fr; /* Dynamisk højde til rækker */
+                }
+            }
+        }
+
+    }
+}
+
+
+
 
 // @media max-width:1200px
 //desktop
