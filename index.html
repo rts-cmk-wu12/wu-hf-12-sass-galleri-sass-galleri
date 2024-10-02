@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore it all</title>
     <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="js/mobileBurger.js"></script>
 </head>
 <body>
     <div class="search">
@@ -13,7 +14,7 @@
     <header>
         <h2>Explore</h2>
         <ul>
-            <img class="mobile-only" src="img/burger.svg" alt="">
+            <img id="burgerIcon" class="mobile-only" src="img/burger.svg" alt="">
             <li><a href="#">Lifestyle</a></li>
             <li><a href="#">Food</a></li>
             <li><a href="#">Home</a></li>
@@ -29,6 +30,16 @@
         </ul>
         
     </header>
+    <div class="burgermenu" id="burgerMenu">
+    <nav>
+            <ul>
+                <li><a href="#">Lifestyle</a></li>
+                <li><a href="#">Food</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Travel</a></li>
+            </ul>
+        </nav>
+    </div>
     <main>
         <div class="photos">
             <img src="https://picsum.photos/200/300?random=1">

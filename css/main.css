@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap);
 * {
   font-family: Inter;
@@ -95,6 +96,39 @@ footer ul li a img {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+#burgerIcon {
+  cursor: pointer;
+  width: 50px; /* Juster størrelsen på burger-ikonet */
+}
+
+.burgermenu {
+  position: fixed;
+  top: 14.4rem;
+  left: -250px; /* Skub menuen uden for skærmen */
+  width: 250px;
+  height: 100%; /* Højden er 100% for at dække hele skærmen */
+  background-color: rgb(255, 255, 255); /* Baggrundsfarve til menuen */
+  transition: left 0.3s ease; /* Glideeffekt for menuen */
+  display: flex; /* Brug flexbox for centrering af indhold */
+  z-index: 9; /* Sørger for, at menuen er over andet indhold, men under headeren */
+}
+.burgermenu nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+.burgermenu nav ul li {
+  margin: 15px 0;
+  margin-left: 1rem;
+}
+.burgermenu nav ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 24px; /* Juster skrifttypestørrelse */
+}
+.burgermenu.active {
+  left: 0; /* Skub menuen ind på skærmen */
 }
 
 @media (max-width: 600px) {

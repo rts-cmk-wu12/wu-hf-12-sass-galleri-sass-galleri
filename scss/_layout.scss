@@ -7,3 +7,45 @@
 }
 
 
+$menu-width: 250px;
+
+
+
+#burgerIcon {
+    cursor: pointer;
+    width: 50px; /* Juster størrelsen på burger-ikonet */
+}
+
+.burgermenu {
+    position: fixed;
+    top: 14.4rem;
+    left: -$menu-width; /* Skub menuen uden for skærmen */
+    width: $menu-width;
+    height: 100%; /* Højden er 100% for at dække hele skærmen */
+    background-color: rgb(255, 255, 255); /* Baggrundsfarve til menuen */
+    transition: left 0.3s ease; /* Glideeffekt for menuen */
+    display: flex; /* Brug flexbox for centrering af indhold */
+    z-index: 9; /* Sørger for, at menuen er over andet indhold, men under headeren */
+
+    nav {
+        ul {
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                margin: 15px 0;
+                margin-left: 1rem;
+
+                a {
+                    text-decoration: none;
+                    color: rgb(0, 0, 0);
+                    font-size: 24px; /* Juster skrifttypestørrelse */
+                }
+            }
+        }
+    }
+
+    &.active {
+        left: 0; /* Skub menuen ind på skærmen */
+    }
+}
