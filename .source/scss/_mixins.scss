@@ -1,0 +1,9 @@
+@mixin color-scheme-muted($theme-muted: lightgray) {
+    background: $theme-muted;
+    color: darkgray;
+}
+
+@mixin color-scheme-contrast($theme-contrast: black) {
+    background: white;
+    color: $theme-contrast;
+}

@@ -1,0 +1,11 @@
+@use 'sass:color';
+@use 'sass:math';
+@use "variables";
+
+$color-dark: black;
+
+@for $i from 1 through 5 {
+    .header-menu__item:nth-child(#{$i}) {
+        box-shadow: 0px 0px 10px lighten($color-dark, $i * 20%);
+    }
+}

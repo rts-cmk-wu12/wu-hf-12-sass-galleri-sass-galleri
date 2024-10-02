@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src=".source/js/three-dot-menu.js" defer></script>
+    <!--<script src=".source/js/sort-images-categories.js" defer></script>-->
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__input-container">
+                <input type="text" class="header__input" placeholder="Search...">
+            </div>
+            <div class="header__navigation-container">
+                <h1 class="header__heading">Explore</h1>
+                <nav class="header__navigation">
+                    <ul class="header-menu">
+                        <li class="header-menu__item"><a class="header-menu__link" href="index.html?category=lifestyle">Lifestyle</a></li>
+                        <li class="header-menu__item"><a class="header-menu__link" href="index.html?category=food">Food</a></li>
+                        <li class="header-menu__item"><a class="header-menu__link" href="index.html?category=home">Home</a></li>
+                        <li class="header-menu__item"><a class="header-menu__link" href="index.html?category=travel">Travel</a></li>
+                        <li class="header-menu__item">
+                            <select name="more-categories" id="category-select" class="header__category-select">
+                                <option>More</option>
+                                <option>Nature</option>
+                                <option>Ocean</option>
+                                <option>Animals</option>
+                            </select>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="three-dot-menu menu-frame">
+                    <div class="three-dot-menu__container menu-frame" id="threeDotMenu">
+                        <div class="three-dot-menu__dot menu-frame"></div>
+                        <div class="three-dot-menu__dot menu-frame"></div>
+                        <div class="three-dot-menu__dot menu-frame"></div>
+                    </div>
+                    <div class="hidden three-dot-menu-frame menu-frame" id="threeDotMenuFrame">
+                        <a class="three-dot-menu-frame__link menu-frame" href="index.html?category=lifestyle">Lifestyle</a>
+                        <a class="three-dot-menu-frame__link menu-frame" href="index.html?category=food">Food</a>
+                        <a class="three-dot-menu-frame__link menu-frame" href="index.html?category=home">Home</a>
+                        <a class="three-dot-menu-frame__link menu-frame" href="index.html?category=travel">Travel</a>
+                        <a class="three-dot-menu-frame__link menu-frame" href="index.html?category=nature">Nature</a>
+                        <a class="three-dot-menu-frame__link menu-frame" href="index.html?category=ocean">Ocean</a>
+                        <a class="three-dot-menu-frame__link menu-frame" href="index.html?category=animals">Animals</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main class="gallery">
+            <ul class="gallery__list">
+                <li data-category="ocean travel nature" class="gallery__list-item">
+                    <a class="gallery__link" href="#">
+                        <img class="gallery__image" src="https://picsum.photos/id/16/1000/1500" alt="ocean">
+                    </a>
+                </li>
+                <li data-category="home lifestyle" class="gallery__list-item desktop-show">
+                    <a class="gallery__link" href="">
+                        <img class="gallery__image" src="https://picsum.photos/id/24/1000/1400" alt="book">
+                    </a>
+                </li>
+                <li data-category="nature" class="gallery__list-item">
+                    <a class="gallery__link" href="">
+                        <img class="gallery__image" src="https://picsum.photos/id/25/1000/1500" alt="branches">
+                    </a>
+                </li>
+                <li data-category="ocean travel nature" class="gallery__list-item">
+                    <a class="gallery__link" href="">
+                        <img class="gallery__image" src="https://picsum.photos/id/27/1000/1400" alt="beach">
+                    </a>
+                </li>
+                <li  data-category="home lifestyle" class="gallery__list-item desktop-show">
+                    <a class="gallery__link" href="">
+                        <img class="gallery__image" src="https://picsum.photos/id/31/1000/1500" alt="feet">
+                    </a>
+                </li>
+                <li data-category="nature travel" class="gallery__list-item">
+                    <a class="gallery__link" href="">
+                        <img class="gallery__image" src="https://picsum.photos/id/38/1000/750" alt="cloud">
+                    </a>
+                </li>
+                <li data-category="animals" class="gallery__list-item">
+                    <a class="gallery__link" href="">
+                        <img class="gallery__image" src="https://picsum.photos/id/40/1000/750" alt="cat nose">
+                    </a>
+                </li>
+                <li data-category="nature" class="gallery__list-item desktop-show">
+                    <a class="gallery__link" href="">
+                        <img class="gallery__image" src="https://picsum.photos/id/41/1000/1000" alt="drops of water">
+                    </a>
+                </li>
+                <li data-category="home lifestyle" class="gallery__list-item">
+                    <a class="gallery__link" href="">
+                        <img class="gallery__image" src="https://picsum.photos/id/48/1000/900" alt="laptop">
+                    </a>
+                </li>
+                <li data-category="ocean animals travel" class="gallery__list-item desktop-show">
+                    <a class="gallery__link" href="">
+                        <img class="gallery__image" src="https://picsum.photos/id/50/1000/900" alt="bird and ocean">
+                    </a>
+                </li>
+                <li data-category="nature" class="gallery__list-item desktop-show">
+                    <a class="gallery__link" href="">
+                        <img class="gallery__image" src="https://picsum.photos/id/55/1000/1200" alt="small plant and ocean">
+                    </a>
+                </li>
+                <li data-category="home lifestyle food" class="gallery__list-item desktop-show">
+                    <a class="gallery__link" href="">
+                        <img class="gallery__image" src="https://picsum.photos/id/63/1000/1100" alt="coffee">
+                    </a>
+                </li>
+                <li data-category="travel nature" class="gallery__list-item desktop-show">
+                    <a class="gallery__link" href="">
+                        <img class="gallery__image" src="https://picsum.photos/id/70/1000/1000" alt="road and trees">
+                    </a>
+                </li>
+                <li data-category="food nature" class="gallery__list-item desktop-show">
+                    <a class="gallery__link" href="">
+                        <img class="gallery__image" src="https://picsum.photos/id/75/1000/900" alt="grapes">
+                    </a>
+                </li>
+                <li data-category="travel" class="gallery__list-item desktop-show">
+                    <a class="gallery__link" href="">
+                        <img class="gallery__image" src="https://picsum.photos/id/78/1000/1200" alt="door">
+                    </a>
+                </li>
+                <li data-category="travel" class="gallery__list-item desktop-show">
+                    <a class="gallery__link" href="">
+                        <img class="gallery__image" src="https://picsum.photos/id/84/1000/1100" alt="bridge">
+                    </a>
+                </li>
+                <li data-category="nature" class="gallery__list-item desktop-show">
+                    <a class="gallery__link" href="">
+                        <img class="gallery__image" src="https://picsum.photos/id/89/1000/1100" alt="grass">
+                    </a>
+                </li>
+                <li data-category="nature travel" class="gallery__list-item desktop-show">
+                    <a class="gallery__link" href="">
+                        <img class="gallery__image" src="https://picsum.photos/id/92/1000/800" alt="sand and ocean">
+                    </a>
+                </li>
+                <li data-category="food lifestyle" class="gallery__list-item desktop-show">
+                    <a class="gallery__link" href="">
+                        <img class="gallery__image" src="https://picsum.photos/id/102/1000/900" alt="raspberries">
+                    </a>
+                </li>
+                <li data-category="nature" class="gallery__list-item desktop-show">
+                    <a class="gallery__link" href="">
+                        <img class="gallery__image" src="https://picsum.photos/id/110/1000/1100" alt="field and sunset">
+                    </a>
+                </li>
+            </ul>
+        </main>
+        <footer class="footer">
+            <a href="#"><i class="fa-solid fa-f"></i></a>
+            <a href="#"><i class="fa-solid fa-dove"></i></a>
+            <a href=""><i class="fa-solid fa-camera"></i></a>
+            <a href=""><i class="fa-solid fa-g"></i></a>
+            <a href=""><i class="fa-solid fa-b"></i></a>
+            <a href=""><i class="fa-solid fa-volleyball"></i></a>
+        </footer>
+    </div>
+</body>
+</html>

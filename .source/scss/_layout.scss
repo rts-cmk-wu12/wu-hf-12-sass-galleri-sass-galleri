@@ -1,0 +1,118 @@
+@use 'placeholders';
+
+/* problem: den vil ikke loade mixin i ovenstående */
+%flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+.desktop-show {
+    display: none;
+}
+
+.wrapper {
+    @extend %flex-column;
+    gap: 1rem;
+    padding-block-end: 4rem;
+}
+
+.header {
+    @extend %flex-column;
+    gap: 2rem;
+    padding: 0.3rem 1rem;
+
+    &__navigation-container {
+        @extend %flex-column;
+        gap: 0.5rem;
+    }
+
+    &__navigation {
+        display: none;
+    }
+
+    .three-dot-menu {
+        display: flex;
+        margin-inline-end: 0.75rem;
+    }
+}
+
+.gallery {
+    padding: 1rem;
+
+    &__list {
+        @extend %flex-column;
+        gap: 1rem;
+    }
+
+    &__image {
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.footer {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+    
+@media (min-width: 64rem) {
+
+    .wrapper {
+        gap: 2rem;
+    }
+
+    .desktop-show {
+        display: block;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        /* NB: placeholder/%flex extend across media query - ? */
+
+        .three-dot-menu {
+            display: none;
+        }
+
+        &__navigation-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        &__navigation {
+            display: block
+        }
+
+        &-menu {
+            display: flex;
+            gap: 2rem;
+            
+            &__item {
+                border-radius: 20rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+    }
+     
+    .gallery {
+        margin: 0 auto;
+
+        &__list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        &__list-item {
+            width: 23.7%;
+        }
+    }
+}
