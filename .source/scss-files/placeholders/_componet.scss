@@ -1,0 +1,63 @@
+@use "mixins";
+
+.imageGal{
+    
+    display: flex;
+    width: 90%;
+    margin: 3rem auto;
+    gap: 1rem;
+    &__row{
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    &__div{
+        
+       
+        
+    }
+    //her er styling til img'et
+    &__img{
+        
+        @include mixins.addHover(0.4s,1.2, grey);
+    }
+}
+
+.imageFocus{
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.278);
+    width: 100%;
+    height: 2000px;
+    margin-top: -3rem;
+    padding-top: 3rem;
+    z-index: 100;
+    &__imageDiv{
+        max-width: 60%;
+        grid-column:1/-1 ;
+        grid-row: 1/-1;
+        margin: 0 auto;
+    }
+    &__x{
+        grid-column:1/-1 ;
+        grid-row: 1/-1;
+       justify-self: end;
+       margin-right: 2rem;
+       font-size: 3rem;
+       
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .imageGal{
+        flex-direction: column;
+        &__img{
+            &:hover{
+                scale: 1;
+            }
+        }
+    }
+    body{
+        
+    }
+}

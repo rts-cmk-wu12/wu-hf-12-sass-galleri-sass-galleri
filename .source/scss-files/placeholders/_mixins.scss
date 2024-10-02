@@ -1,0 +1,14 @@
+
+
+@mixin navBar($width,$display, $gap){
+    width: $width;
+    display: $display;
+    gap: $gap;
+}
+@mixin addHover($transition: 0.4s, $scale: 1.2, $backgroundColorChange: none){
+    transition: $transition;
+    &:hover{
+        background-color: $backgroundColorChange;
+        scale: (#{$scale});
+    }
+}

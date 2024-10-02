@@ -1,0 +1,25 @@
+@use "./placeholders/variables";
+@use "./placeholders/base";
+@use "./placeholders/mixins";
+@use "./placeholders/layout";
+@use "./placeholders/componet";
+
+
+.heading{
+    margin-left: 15%;
+    margin-bottom: 1rem
+}
+.navBar{
+    @include mixins.navBar(600px, flex, 1rem);
+    margin-left: 15%;
+    margin-bottom: 2rem;
+    &__items{
+        list-style: none;
+    }
+    &__links{
+        text-decoration: none;
+        color: black;
+       
+    }
+}
+
