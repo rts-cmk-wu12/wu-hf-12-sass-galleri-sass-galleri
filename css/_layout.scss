@@ -1,4 +1,8 @@
 /*Her laver jeg layout til nav*/
+
+header{
+    border-bottom: 1px solid;
+}
 .nav__ {
     height: 65px;
 }
@@ -7,7 +11,7 @@
     background-color: var(--light-color);
     display: grid;
     margin: 0 auto;
-    width: 2200px;
+    width: 1800px;
     height: 45px;
     border: none;
     outline: none;
@@ -17,8 +21,62 @@
     color: var(--light-grey-color);
 }
 
-/*Her styler jeg links og header*/
-.explore__container {
-    display: grid;
-    margin: 25px;
+::placeholder{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--search-color);
 }
+
+
+
+/*Her styler jeg links og header*/
+.explore__section{
+    margin-left: 20em;
+}
+.explore__header{
+    display: flex;
+    margin: 25px;
+    gap: 1rem;
+    font-size: 55px;
+    color: var(--dark-color);
+}
+
+.explore__links{
+    text-decoration: none;
+    font-size: 24px;
+    color: var(--light-grey-color);
+    font-weight: bold;
+}
+
+.explore__container {
+    display: flex;
+    margin: 25px;
+    gap: 1rem;
+}
+
+/*Styling til selve galleriet*/
+.gallery__container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+
+  .gallery__column {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  .gallery__column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 95%;
+    border-radius: 5px;
+  }
+
+  /*footer*/
+  .footer__{
+    height: 328px;
+  }
