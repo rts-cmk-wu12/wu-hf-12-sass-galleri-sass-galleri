@@ -25,6 +25,18 @@ img {
   font-weight: 600;
 }
 
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.23);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.footer__logos {
+  display: flex;
+  max-width: 20%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
 .imageGal {
   display: flex;
   width: 90%;
@@ -49,14 +61,14 @@ img {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.278);
   width: 100%;
-  height: 2000px;
+  height: 110vh;
   margin-top: -3rem;
-  padding-top: 3rem;
   z-index: 100;
 }
 .imageFocus__imageDiv {
   max-width: 60%;
   grid-column: 1/-1;
+  align-self: center;
   grid-row: 1/-1;
   margin: 0 auto;
 }
@@ -64,8 +76,10 @@ img {
   grid-column: 1/-1;
   grid-row: 1/-1;
   justify-self: end;
+  z-index: 200;
   margin-right: 2rem;
   font-size: 3rem;
+  margin-top: 3rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -94,4 +108,25 @@ img {
 .navBar__links {
   text-decoration: none;
   color: black;
+}
+.navBar__links--burger {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .navBar__items {
+    list-style: none;
+    display: none;
+  }
+  .navBar__items--burger {
+    display: block;
+  }
+  .navBar__items--burger a {
+    display: block;
+    font-size: 2rem;
+  }
+  .navBar__links {
+    text-decoration: none;
+    color: black;
+  }
 }

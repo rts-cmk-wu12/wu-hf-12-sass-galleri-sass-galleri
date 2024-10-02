@@ -19,7 +19,34 @@
     &__links{
         text-decoration: none;
         color: black;
-       
+        &--burger{
+            display: none;
+        }
     }
+}
+
+@media only screen and (max-width: 600px) {
+    .navBar{
+        
+        &__items{
+            list-style: none;
+            display: none;
+            &--burger{
+                display: block;
+                a{
+                    display: block;
+                    font-size: 2rem;
+                }
+
+            }
+        }
+        
+        &__links{
+            text-decoration: none;
+            color: black;
+           
+        }
+    }
+   
 }
 
