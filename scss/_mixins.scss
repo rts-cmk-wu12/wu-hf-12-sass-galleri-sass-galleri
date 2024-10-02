@@ -1,76 +1,49 @@
-body{
-    header {
-        ul{
-            li{
-                @media (max-width:1200px){
-                    display: none;
-                }
-                @media (min-width:1200px){
+// Mobile
+@media (max-width: 600px){
+    body{
+        .search{
+            padding-top: 0.2rem;
+            margin-left: 3rem;
+            margin-bottom: 3rem;
+        }
+        header{
+            margin: 0;
+            padding: 0;
+            margin-left: 0.2rem;
+            ul{
+                li{display: none;}
+                .mobile-only{
                     display: inline-block;
-                    
+                    margin-left: 1rem;
+                
                 }
             }
-            .mobile-only{
-                @media (max-width:1200px){
-                    display: inline-block;
-                }
-                @media (min-width:1200px){
-                    display: none;
-                }
+        }
+        main{
+            .photos{
+                grid-template-columns: 1fr; 
+                grid-auto-rows: 1fr;
             }
         }
     }
 }
 
-
-main {
-    .photos {
-        display: grid;
-        gap: 10px;
-    }
-
-    .photos img {
-        width: 100%;
-        height: auto; /* Fjern fast højde */
-        object-fit: cover; /* Bevar billedets dimensioner og skær det til, hvis nødvendigt */
-      
-        display: block; /* Fjerner uønskede mellemrum omkring billedet */
-    }
-
-    @media (max-width: 600px) {
-        body{
-            div.search{
-                background-color: red;
-            }
-            header{
-                background-color: red;
-            }
-            main{
-                .photos {
-                    grid-template-columns: 1fr; /* Enkelt kolonne på mindre skærme */
-                }
-            }
-        }
-    }
-
-    @media (min-width: 601px) {
-        body{
-            main{<
-                .photos {
-                    grid-template-columns: repeat(5, 1fr); /* Fem kolonner på større skærme */
-                    grid-auto-rows: 1fr; /* Dynamisk højde til rækker */
-                }
-            }
-        }
-
-    }
-}
-
-
-
-
-// @media max-width:1200px
 //desktop
-
-// @media min-width:1200px
-//dekstop
+@media (min-width: 601px){
+    body{
+        
+        header{
+            ul{
+                li{display: inline-block;}
+                .mobile-only{display: none;}
+            }
+        }
+        
+    }
+    main{
+        .photos{
+            grid-template-columns: repeat(5, 1fr); 
+            grid-auto-rows: 1fr; 
+        }
+    }
+}

@@ -1,6 +1,22 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap);
+* {
+  font-family: Inter;
+}
+
 main {
   margin: 1rem;
+}
+main .photos {
+  display: grid;
+  gap: 10px;
+}
+main .photos img {
+  width: 100%;
+  height: auto; /* Fjern fast højde */
+  -o-object-fit: cover;
+     object-fit: cover; /* Bevar billedets dimensioner og skær det til, hvis nødvendigt */
+  display: block; /* Fjerner uønskede mellemrum omkring billedet */
 }
 
 .search {
@@ -82,52 +98,38 @@ footer ul li a img {
   box-sizing: border-box;
 }
 
-@media (max-width: 1200px) {
-  body header ul li {
-    display: none;
-  }
-}
-@media (min-width: 1200px) {
-  body header ul li {
-    display: inline-block;
-  }
-}
-@media (max-width: 1200px) {
-  body header ul .mobile-only {
-    display: inline-block;
-  }
-}
-@media (min-width: 1200px) {
-  body header ul .mobile-only {
-    display: none;
-  }
-}
-
-main .photos {
-  display: grid;
-  gap: 10px;
-}
-main .photos img {
-  width: 100%;
-  height: auto; /* Fjern fast højde */
-  -o-object-fit: cover;
-     object-fit: cover; /* Bevar billedets dimensioner og skær det til, hvis nødvendigt */
-  display: block; /* Fjerner uønskede mellemrum omkring billedet */
-}
 @media (max-width: 600px) {
-  main body div.search {
-    background-color: red;
+  body .search {
+    padding-top: 0.2rem;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
   }
-  main body header {
-    background-color: red;
+  body header {
+    margin: 0;
+    padding: 0;
+    margin-left: 0.2rem;
   }
-  main body main .photos {
-    grid-template-columns: 1fr; /* Enkelt kolonne på mindre skærme */
+  body header ul li {
+    display: none;
+  }
+  body header ul .mobile-only {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+  body main .photos {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
   }
 }
 @media (min-width: 601px) {
-  main body main .photos {
-    grid-template-columns: repeat(5, 1fr); /* Fem kolonner på større skærme */
-    grid-auto-rows: 1fr; /* Dynamisk højde til rækker */
+  body header ul li {
+    display: inline-block;
+  }
+  body header ul .mobile-only {
+    display: none;
+  }
+  main .photos {
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 1fr;
   }
 }/*# sourceMappingURL=main.css.map */

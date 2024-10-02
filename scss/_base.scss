@@ -1,5 +1,20 @@
+*{
+    font-family: Inter;
+}
 main{
     margin: 1rem;
+    .photos {
+        display: grid;
+        gap: 10px;
+    }
+
+    .photos img {
+        width: 100%;
+        height: auto; /* Fjern fast højde */
+        object-fit: cover; /* Bevar billedets dimensioner og skær det til, hvis nødvendigt */
+
+        display: block; /* Fjerner uønskede mellemrum omkring billedet */
+    }
 }
 
 //header
