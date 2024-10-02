@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="css/main.css"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="gallery.js" defer></script>
+    <title>Sass gallery</title>
+</head>
+<body>
+    <input type="search" placeholder="Search..." class="searchbar">
+    <p class="index-title">Explore</p>
+    <header>
+        <nav class="index-nav">
+            <ul>
+                <button id="lifestyle-btn">
+                    <li>Lifestyle</li>
+                </button>
+                <button id="food-btn">
+                    <li>Food</li>
+                </button>
+                <button id="home-btn">
+                    <li>Home</li>
+                </button>
+                <button id="travel-btn">
+                    <li>Travel</li>
+                </button>
+                <a href="">
+                    <li>
+                        <select name="more" id="more-options" place-holder="More" class="more-options">
+                                <option value="More">More</option>
+                                <button><option value="Sports">Sports</option></button>
+                        </select>
+                   
+                    </li>
+                </a>
+                
+            </ul>
+        </nav>
+    </header>
+    <div class="sass-gallery">
+        <div>
+            <img class="gallery-items"  class="filter" src="./.source/gallery-images/lifestyle-coffee.jpg" alt=""  data-category="home"  data-category="lifestyle">
+            <img class="gallery-items"  class="filter" src="./.source/gallery-images/lifestyle-diet.jpg" alt="" data-category="food" data-category="lifestyle">
+            <img class="gallery-items"  class="filter" src="./.source/gallery-images/lifestyle-jogging.jpg" alt="" data-category="health" data-category="lifestyle">
+        </div>
+
+        <div>
+            <img class="gallery-items"  class="filter" src="./.source/gallery-images/lifestyle-fitness.jpg" alt="" data-category="health" data-category="lifestyle" data-category="lifestyle">
+            <img class="gallery-items"  class="filter" src="./.source/gallery-images/lifestyle-sport.jpg" alt=""  data-category="health" data-category="lifestyle" data-category="lifestyle">
+            <img class="gallery-items"  class="filter" src="./.source/gallery-images/Lifestyle-yoga.jpg" alt=""  data-category="health" data-category="lifestyle" data-category="lifestyle">
+        </div>
+
+        <div>
+            <img class="gallery-items"  class="filter" src="./.source/gallery-images/lifestyle-kitchen.jpg" alt="" data-category="home" data-category="lifestyle">
+            <img class="gallery-items"  class="filter" src="./.source/gallery-images/lifestyle-weightlifting.jpg" alt="" data-category="health" data-category="lifestyle" data-category="lifestyle">
+            <img class="gallery-items"  class="filter" src="./.source/gallery-images/lifestyle-running.jpg" alt="" data-category="health" data-category="lifestyle">
+        </div>
+
+        <div>
+            <img class="gallery-items"  class="filter" src="./.source/gallery-images/lifestyle-ancientvisit.jpg" alt="" data-category="travel" data-category="lifestyle">
+            <img class="gallery-items"  class="filter" src="./.source/gallery-images/lifestyle-boattravel.jpg" alt="" data-category="travel" data-category="lifestyle">
+            <img class="gallery-items"  class="filter" src="./.source/gallery-images/lifestyle-catholictravel.jpg" alt="" data-category="travel" data-category="lifestyle">
+        </div>
+        <div>
+            <img class="gallery-items"  class="filter" src="./.source/gallery-images/lifestyle-lookingatmap.jpg" alt="" data-category="travel" data-category="lifestyle">
+            <img class="gallery-items"  class="filter" src="./.source/gallery-images/lifestyle-photoshoot.jpg" alt="" data-category="travel" data-category="lifestyle">
+            <img class="gallery-items"  class="filter" src="./.source/gallery-images/lifestyle-swimming.jpg" alt="" data-category="Sports" data-category="lifestyle">
+    </div>
+    <div>
+            <img class="gallery-items"  class="filter" src="./.source/gallery-images/lifestyle-basketball.jpg" alt="" data-category="Sports" data-category="lifestyle">
+            <img class="gallery-items"  class="filter" src="./.source/gallery-images/lifestyle-rockclimbing.jpg" alt="" data-category="Sports" data-category="lifestyle">
+            <img class="gallery-items"  class="filter" src="./.source/gallery-images/lifestyle-volleyball.jpg" alt="" data-category="Sports" data-category="lifestyle">
+            <img class="gallery-items"  class="filter" src="./.source/gallery-images/lifestyle-football.jpg" alt="" data-category="Sports" data-category="lifestyle">
+        </div>
+    </div>
+    <footer class="index-footer">
+        <div>
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+    </footer>
+</body>
+</html>
