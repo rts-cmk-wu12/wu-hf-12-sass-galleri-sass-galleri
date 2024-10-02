@@ -93,6 +93,7 @@ img {
 .heading {
   margin-left: 15%;
   margin-bottom: 1rem;
+  color: rgb(53, 58, 63);
 }
 
 .navBar {
@@ -107,7 +108,7 @@ img {
 }
 .navBar__links {
   text-decoration: none;
-  color: black;
+  color: rgb(178, 178, 178);
 }
 .navBar__links--burger {
   display: none;
